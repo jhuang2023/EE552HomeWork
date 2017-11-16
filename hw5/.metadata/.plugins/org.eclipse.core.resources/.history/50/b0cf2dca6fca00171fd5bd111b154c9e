@@ -1,0 +1,14 @@
+package weiqigame;
+import java.awt.*;
+import javax.swing.*;
+
+public class Checkers extends JFrame {
+	public Checkers() {
+		Container c = getContentPane();
+		setSize(190,190);
+		setVisible(true);
+		
+	}
+	
+
+}

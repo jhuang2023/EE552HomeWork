@@ -1,0 +1,36 @@
+package weiqigame;
+import java.awt.*;
+import javax.swing.*;
+
+public class Checkers extends JFrame {
+	private int x, y;
+	
+	private void draw(Graphics g) {
+		//x=0;
+		//y=0;
+		for( x=0; x<=19;x+=10) {
+			
+//			g.fillRect(x,y,10,10);
+			for (y=0;y<=190;y+=10) {
+				if(x+y%20==0) {
+					g.setColor(Color.BLACK);
+					//g.fillRect(x,y,10,10);
+			}
+				else {
+					g.setColor(Color.BLACK);
+					//g.fillRect(x,y,10,10);
+				}
+				g.fillRect(x,y,10,10);
+			}	
+		}
+	}
+	
+	
+	public Checkers() {
+		Container c = getContentPane();
+		setSize(190,190);
+		setVisible(true);
+	}
+	
+
+}

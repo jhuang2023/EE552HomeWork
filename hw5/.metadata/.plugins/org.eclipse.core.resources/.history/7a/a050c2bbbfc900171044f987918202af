@@ -1,0 +1,5 @@
+package drawapp.component;
+
+public class Shape {
+
+}

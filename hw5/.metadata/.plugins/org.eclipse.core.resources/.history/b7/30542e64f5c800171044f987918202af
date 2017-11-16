@@ -1,0 +1,85 @@
+package drawapp;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class DrawApp extends JFrame{
+	private DrawArea da;
+	private boolean dirty;
+	private void buildToolbar(Container c) {
+		JPanel p = new JPanel();
+		p.setLayout(new GridLayout(4,1));
+		dirty = true;
+		JButton b;
+		p.add(b = new JButton("line"));
+		p.add(b = new JButton("ellipse"));
+		p.add(b = new JButton("rectagular"));
+		c.add(p,BorderLayout.WEST);//??????
+
+	}
+	public void save() {
+		dirty = false;
+	}
+	private void handleEvents() {
+		addWindowListener(new WindowListener() {
+
+			@Override
+			public void windowActivated(WindowEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void windowClosed(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void windowClosing(WindowEvent e) {
+				// TODO Auto-generated method stub
+				JDialog dialog = new JDialog(DrawApp.this,"quit?",true);
+				dialog.setVisible(true);
+				//System.exit(0);
+			}
+
+			@Override
+			public void windowDeactivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void windowDeiconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void windowIconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void windowOpened(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+	}
+	
+	public DrawApp() {
+		Container c = getContentPane();
+		buildToolbar(c);//????????
+		handleEvents();
+		da = new DrawArea();
+		c.add(da, BorderLayout.CENTER);
+		setSize(700,400);
+		setVisible(true);
+		
+		
+	}
+
+}

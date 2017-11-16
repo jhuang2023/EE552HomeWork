@@ -1,0 +1,16 @@
+package drawapp;
+import java.awt.*;
+import javax.swing.*;
+
+
+public class DrawArea extends JPanel {
+	public DrawArea() {
+		setBackground(Color.gray);
+	}
+	
+	public void paint(Graphics g) {
+		Graphics2D g2 = (Graphics2D)g;
+		g2.drawLine(0, 0, 100, 100);
+	}
+	
+}

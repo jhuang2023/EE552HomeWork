@@ -1,0 +1,28 @@
+package drawapp;
+import java.awt.*;
+import javax.swing.*;
+
+public class DrawApp extends JFrame{
+	private DrawArea da;
+	private void buildToolbar(Container c) {
+		JPanel p = new JPanel();
+		p.setLayout(new GridLayout(4,1));
+		JButton b;
+		p.add(b = new JButton("line"));
+		p.add(b = new JButton("ellipse"));
+		p.add(b = new JButton("rectagular"));
+		c.add(p,BorderLayout.WEST);
+
+	}
+	public DrawApp() {
+		Container c = getContentPane();
+		buildToolbar(c);
+		da = new DrawArea();
+		c.add(da, BorderLayout.CENTER);
+		setSize(700,400);
+		setVisible(true);
+		
+		
+	}
+
+}

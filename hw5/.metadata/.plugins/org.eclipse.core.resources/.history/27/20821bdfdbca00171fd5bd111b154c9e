@@ -1,0 +1,56 @@
+package weiqigame;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+
+
+public class Chess {
+	private int x,y;
+	private ArrayList<x,y> 
+	public Chess() {
+		
+		
+	}
+	
+	class Mymouse implements MouseListener{
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			Graphics g = getGraphics();
+			g.fillOval(e.getX(), e.getY(), 50, 50);
+			
+			
+		}
+
+//		private Graphics getGraphics() {
+//			fillOval()
+//		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	
+}
